@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --color-background-hover: #6c71b882;
+    --color-background-statistics: #1C238D;
+    --color-background-news: #F6F3EE;
+    --color-background-input: #F2F2F2;
+    --color-background-form: #f6f3ee82;
+    --font-sans: "Urbanist", sans-serif;
+  }
+
+  .dark {
+    --color-background-hover: #6c71b882;
+    --color-background-statistics: #1C238D;
+    --color-background-news: oklch(22.2% 0.046 258.8 / 0.51);
+    --color-background-form: oklch(37.2% 0.046 258.8 / 0.51);
+  }
+
+  .fa, .fas, .far, .fab {
+    font-display: swap !important;
+  }
+}
+
+@layer utilities {
+  .bg-background-statistics {
+    background-color: var(--color-background-statistics);
+  }
+  .bg-background-news {
+    background-color: var(--color-background-news);
+  }
+  .bg-background-hover {
+    background-color: var(--color-background-hover);
+  }
+  .bg-background-input {
+    background-color: var(--color-background-input);
+  }
+  .bg-background-form {
+    background-color: var(--color-background-form);
+  }
+}
